@@ -6,6 +6,12 @@ Example:
 solution(5) // should return "Value is 00005"
 */
 
-function solution(value){
-  //...
+const solution = (value) => {
+  const length = value.toString().length;
+  const padding = 5 - length;
+  let string = "Value is ";
+  for(let i = 0; i < padding; i++) {
+    string += '0';
+  }
+  return string + value;
 }
